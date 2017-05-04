@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'planes#index'
+
+  mount ActionCable.server => "/cable"
+
+
+  namespace :api do
+    put 'planes/state/:id', to: 'plane_state#update'
+    resources :planes, only: [:create]
+  end
+
 end
