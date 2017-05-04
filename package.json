@@ -2,7 +2,9 @@
   "name": "air_traffic_controller",
   "private": true,
   "dependencies": {
+    "antd": "^2.9.3",
     "autoprefixer": "^6.7.7",
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "7.x",
     "babel-preset-env": "^1.4.0",
@@ -24,6 +26,7 @@
     "rails-erb-loader": "^5.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react_ujs": "^2.1.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",

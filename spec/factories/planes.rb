@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :plane do
-    name "MyString"
+    sequence(:name) { |n| "name-#{n}" }
   end
 end

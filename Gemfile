@@ -8,12 +8,15 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.20.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use Aasm as the state machine
-gem 'aasm', '~> 4.11'
+gem 'aasm', '~> 4.12'
+# Use PaperTrail as the history state tracker
+gem 'paper_trail', '~> 6.0', '>= 6.0.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,12 +33,19 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
+gem 'redis', '~> 3.0'
+gem 'redis-namespace'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'sidekiq', '~> 5.0'
+gem 'foreman', '~> 0.84.0'
+
+# For FrontEnd
+gem 'react-rails', '~> 2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +56,11 @@ group :development, :test do
 
   gem 'factory_girl_rails', '~> 4.0'
   gem 'rspec-rails', '~> 3.5'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'json-schema'
 end
 
 group :development do

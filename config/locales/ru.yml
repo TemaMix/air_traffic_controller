@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    attributes:
+      plane:
+        aasm_state: Статус
+        aasm_state/in_shelter: в ангаре
+        aasm_state/waiting: ожидание вылета
+        aasm_state/takeoff: взлетает
+        aasm_state/flying: вылетел

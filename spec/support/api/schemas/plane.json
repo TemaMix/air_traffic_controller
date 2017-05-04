@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "state",
+    "human_state",
+    "history_state"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "human_state": {
+      "type": "string"
+    },
+    "history_state": {
+      "type": "array"
+    }
+  }
+}
